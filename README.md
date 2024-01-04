@@ -9,7 +9,6 @@ A Flutter project demonstrating WebSocket integration with BravoShopGo's API for
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
