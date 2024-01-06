@@ -40,10 +40,7 @@ class WebsocketCubit extends Cubit<Map<String, dynamic>> {
         print("WebSocket connection closed");
       });
 
-      Map<String, String> data = {
-        "service": "hepsiburada",
-        "product_url": "https://www.hepsiburada.com/samsung-galaxy-s23-128-gb-8-gb-ram-samsung-turkiye-garantili-p-HBCV00003Z341U?magaza=Hepsiburada"
-      };
+      Map<String, String> data = {"service": "hm", "product_url": "https://www2.hm.com/tr_tr/productpage.1206747001.html"};
 
       ws.add(jsonEncode(data));
     } catch (e) {

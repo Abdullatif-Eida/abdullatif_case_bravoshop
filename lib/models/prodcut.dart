@@ -61,7 +61,7 @@ class ProductColor {
 
 class ProductSize {
   final String size;
-  final int price;
+  final double price;
   final String available;
 
   ProductSize({
@@ -73,7 +73,7 @@ class ProductSize {
   factory ProductSize.fromJson(Map<String, dynamic> json) {
     return ProductSize(
       size: json['size'],
-      price: json['price'],
+      price: double.parse(json['price'].toString()),
       available: json['available'],
     );
   }

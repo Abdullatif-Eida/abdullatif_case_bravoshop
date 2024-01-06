@@ -22,38 +22,22 @@ class _TrendyolViewState extends State<TrendyolView> with Trendyol {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-          ),
-        ),
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
-            ),
-          ),
-          child: Scrollbar(
+      body: Stack(
+        alignment: Alignment.topLeft,
+        children: [
+          Scrollbar(
               controller: ScrollController(),
               radius: const Radius.circular(18),
               thickness: 3,
               interactive: true,
-              child: ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  ),
-                  child: WebViewWidget(controller: controller))),
-        ),
+              child: WebViewWidget(controller: controller)),
+          Positioned(
+              child: Container(
+            height: 100,
+            width: 200,
+            color: Colors.red,
+          )),
+        ],
       ),
     );
   }

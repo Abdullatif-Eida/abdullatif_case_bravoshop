@@ -90,6 +90,23 @@ class ProductDetailsScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: List.generate(
+                      product.productSizes.length,
+                      (index) => Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(7), border: Border.all(color: Colors.black, width: 1.5)),
+                          child: Text(product.productSizes[index].size),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 MaterialButton(
                   onPressed: () {},
                   height: 50,
